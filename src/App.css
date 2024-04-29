@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+
+h6 {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+td {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 2px;
+    background-color: red;
+}
+
+tr td {
+    background-color: #00000025;
+}
+
+
+tr td:nth-child(1) {
+    background-color: #00000075;
+}
+
+tr:nth-last-child(1) td:nth-child(1) {
+    border-radius: 0px 0px 0px 30px;
+}
+
+tr:nth-last-child(1) td:nth-last-child(1) {
+    border-radius: 0px 0px 30px 0px;
+}
+
+th {
+    background-color: #00000025;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+
+th:nth-child(1) {
+    background-color: #00000075;
+}
+
+th:nth-child(1) {
+    border-radius: 30px 0px 0px 0px;
+}
+
+th:nth-last-child(1) {
+    border-radius: 0px 30px 0px 0px;
+}
