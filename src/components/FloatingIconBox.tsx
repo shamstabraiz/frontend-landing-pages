@@ -67,9 +67,7 @@ function FloatingIconBox() {
                 }
                 text={
                     <span>
-                        Analytics
-                        <br />
-                        and Reporting
+                       Statistics
                     </span>
                 }
             />
@@ -85,9 +83,7 @@ function FloatingIconBox() {
                 }
                 text={
                     <span>
-                        Templates and
-                        <br />
-                        Themes
+                        Templates
                     </span>
                 }
             />

@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Contact from './views/Contact'
 import Home from './views/Home'
 import Pricing from './views/Pricing'
+import Partner from './views/Partner'
 
 function App() {
 
@@ -38,7 +39,16 @@ function App() {
             </>
           }
         />
+         <Route
+          path="/partner"
+          element={
+            <>
+              <Partner />
+            </>
+          }
+        />
       </Routes>
+      
       <Footer />
     </div>
   )

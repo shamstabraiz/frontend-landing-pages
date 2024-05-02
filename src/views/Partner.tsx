@@ -1,22 +1,18 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa"
 import CenterContainer from "../Layout/CenterContainer"
-import { FaLocationPin } from "react-icons/fa6"
 import ContactInput from "../components/ContactInput"
 import Button from "../components/Action/Button"
 import { useState } from "react"
 import { toast } from "react-toastify"
 import axios from "axios"
 
-function Contact() {
-
+function Partner() {
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        name: "",
+        companyName: "",
+        numberScreen: "",
         email: "",
-        phone: "",
-        message: ""
+        phone: ""
     })
-
     const onInputChange = (e: any) => {
         setFormData({
             ...formData,
@@ -24,18 +20,18 @@ function Contact() {
         })
     }
     const sendMail = async () => {
-        if (!formData.email || !formData.firstName || !formData.lastName || !formData.phone || !formData.message) {
+        if (!formData.email || !formData.name || !formData.companyName || !formData.numberScreen || !formData.phone) {
             toast.error("Please fill all fields")
             return
         }
         const ContactData = { ...formData }
 
         setFormData({
-            firstName: "",
-            lastName: "",
+            name: "",
+            companyName: "",
+            numberScreen: "",
             email: "",
-            phone: "",
-            message: ""
+            phone: ""
         });
 
         try {
@@ -45,48 +41,37 @@ function Contact() {
             toast.error("An error occured")
         }
     }
-
-
     return (
         <CenterContainer>
-            <div className="flex flex-row items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
-                <div className="bg-Background p-12 rounded-6xl w-[55%]">
-                    <h4>Contact Information</h4>
-                    <p className="pb-16">Say something to start a live chat!</p>
-                    <div>
-                        <div className="flex flex-row gap-3"><FaPhone /> +1(251)753-2908</div>
-                        <div className="flex flex-row gap-3"><FaEnvelope />cwhite@complete3tech.com</div>
-                        <div className="flex flex-row gap-3"><FaLocationPin /> block 3, texsas USA</div>
-                    </div>
-                </div>
-                <div className="flex w-full flex-col">
+            <div className="flex flex-row justify-center items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
+                <div className="bg-Background p-12 rounded-6xl  w-full  max-w-[800px]">
+                    <h4>Become A Partner</h4>
                     <div className="flex flex-col w-full">
                         <div className=" flex flex-row justify-between">
                             <div className="w-[40%]">
-                                <ContactInput lable="First Name" value={formData["firstName"]} onChange={onInputChange} name="firstName" />
+                                <ContactInput lable="Name" value={formData["name"]} onChange={onInputChange} name="name" />
                             </div>
                             <div className="w-[40%]">
-                                <ContactInput lable="Last Name" value={formData["lastName"]} onChange={onInputChange} name="lastName" />
+                                <ContactInput lable="Company Name" value={formData["companyName"]} onChange={onInputChange} name="companyName" />
                             </div>
                         </div>
                         <div className=" flex flex-row justify-between">
                             <div className="w-[40%]">
-                                <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
+                                <ContactInput lable="Number Of Screens" type="number" value={formData["numberScreen"]} onChange={onInputChange} name="numberScreen" />
                             </div>
                             <div className="w-[40%]">
-                                <ContactInput lable="Phone Number" value={formData["phone"]} onChange={onInputChange} name="phone" />
+                                <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
                             </div>
                         </div>
                         <div className="w-full flex flex-row justify-between">
-                            <ContactInput lable="Message" onChange={onInputChange} value={formData["message"]} name="message" />
+                            <ContactInput lable="Phone" value={formData["phone"]} onChange={onInputChange} name="phone" />
                         </div>
                     </div>
                     <Button className="w-[98%] max-w-[100%]" onClick={sendMail}>Send Message</Button>
                 </div>
-
             </div>
         </CenterContainer>
     )
 }
 
-export default Contact
+export default Partner

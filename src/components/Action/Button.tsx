@@ -4,13 +4,13 @@ function Button({ type = "Primary-P100", children,className, ...props }: { type?
     switch (type) {
         case 'Primary-P100':
             return (
-                <button {...props} className={' text-white bg-gradient-to-r from-[#7916ff] to-[#843dff] px-[22px] py-[9px] m-2 rounded-7xl text-title-xsm hover:opacity-90 transition delay-100 '+className}>
+                <button {...props} className={' text-white bg-gradient-to-r from-[#0095FF] to-[#17B8B5] px-[22px] py-[9px] m-2 rounded-7xl text-title-xsm hover:opacity-90 transition delay-100 '+className}>
                     {children}
                 </button>
             )
         case 'secondary':
             return (
-                <button className={'text-transparent bg-clip-text  bg-gradient-to-r  from-[#ffffff] to-[#7841f8] px-[22px] py-[9px] m-2 rounded-7xl text-title-xsm hover:opacity-90 transition delay-100 border-Primary-P100 border-solid border-[1px] '+className}>
+                <button className={'text-transparent bg-clip-text  bg-gradient-to-r from-[#0095FF] to-[#17B8B5] px-[22px] py-[9px] m-2 rounded-7xl text-title-xsm hover:opacity-90 transition delay-100 border-Primary-P100 border-solid border-[1px] '+className}>
                     {children}
                 </button>
             )

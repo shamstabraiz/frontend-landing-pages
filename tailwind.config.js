@@ -12,18 +12,18 @@ module.exports = {
       ...defaultTheme.screens,
     },
     "colors": {
-      "Background": "#2C0076",
-      "Sec": "#7916ff",
+      "Background": "#042a45",
+      "Sec": "#0a9693",
       'white': '#ffffff',
       "transparent": "transparent",
       "Primary": {
-        "P50": "#f3f1ff",
-        "P75": "#f3f1ff",
-        "P100": "#d9ceff",
-        "P200": "#d9ceff",
-        "P300": "#bea6ff",
-        "P400": "#9f75ff",
-        "P500": "#843dff"
+        "P50": "#e6f4ff",
+        "P75": "#96d4ff",
+        "P100": "#6bc2ff",
+        "P200": "#2ba7ff",
+        "P300": "#0095ff",
+        "P400": "#0068b3",
+        "P500": "#005b9c"
       },
       "Danger": {
         "D50": "#fee7e7",

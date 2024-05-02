@@ -1,7 +1,6 @@
 import CenterContainer from "../Layout/CenterContainer"
 import Button from "../components/Action/Button"
 import TickIcon from "../components/TickIcon"
-import NewsLetter from "../components/NewsLetter"
 function Pricing() {
     return (
         <>
@@ -129,9 +128,7 @@ function Pricing() {
                 </CenterContainer>
 
             </main>
-            <div className="flex justify-center items-center">
-                <NewsLetter />
-            </div>
+           
         </>
 
     )
