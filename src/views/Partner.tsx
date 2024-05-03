@@ -4,7 +4,9 @@ import Button from "../components/Action/Button"
 import { useState } from "react"
 import { toast } from "react-toastify"
 import axios from "axios"
-
+import techVector from "../assets/techVector.png";
+import TextWithImageAndButton from "../components/TextWithImageAndButton";
+import vectorPeople from "../assets/vectorPeople.png";
 function Partner() {
     const [formData, setFormData] = useState({
         name: "",
@@ -42,35 +44,61 @@ function Partner() {
         }
     }
     return (
-        <CenterContainer>
-            <div className="flex flex-row justify-center items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
-                <div className="bg-Background p-12 rounded-6xl  w-full  max-w-[800px]">
-                    <h4>Become A Partner</h4>
-                    <div className="flex flex-col w-full">
-                        <div className=" flex flex-row justify-between">
-                            <div className="w-[40%]">
-                                <ContactInput lable="Name" value={formData["name"]} onChange={onInputChange} name="name" />
-                            </div>
-                            <div className="w-[40%]">
-                                <ContactInput lable="Company Name" value={formData["companyName"]} onChange={onInputChange} name="companyName" />
-                            </div>
-                        </div>
-                        <div className=" flex flex-row justify-between">
-                            <div className="w-[40%]">
-                                <ContactInput lable="Number Of Screens" type="number" value={formData["numberScreen"]} onChange={onInputChange} name="numberScreen" />
-                            </div>
-                            <div className="w-[40%]">
-                                <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
-                            </div>
-                        </div>
-                        <div className="w-full flex flex-row justify-between">
-                            <ContactInput lable="Phone" value={formData["phone"]} onChange={onInputChange} name="phone" />
-                        </div>
-                    </div>
-                    <Button className="w-[98%] max-w-[100%]" onClick={sendMail}>Send Message</Button>
+        <>
+            <CenterContainer>
+                <div className="text-center">
+                    <h3 className="text-center">
+                        Benifits Of Partnering With Us
+                    </h3>
+                    <h6> Get Started Now </h6>
                 </div>
-            </div>
-        </CenterContainer>
+                <TextWithImageAndButton
+                    img={techVector}
+                    title="You Can Sell it"
+                    description="Vibe Sign Partner Program is designed to help you grow your business by providing you with the tools and resources you need to sell digital signage solutions to your customers."
+                    rightImage={false}
+                    button="Get Started"
+
+                />
+                <TextWithImageAndButton
+                    img={vectorPeople}
+                    title="Control You Clients"
+                    description="The software is designed to be easy to use and intuitive, so you can spend less time training your clients and more time growing your business."
+                    button="Get Started"
+                />
+            </CenterContainer>
+
+            <CenterContainer>
+                <div className="flex flex-row justify-center items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
+                    <div className="bg-Background p-12 rounded-6xl  w-full  max-w-[800px]">
+                        <h4>Become A Partner</h4>
+                        <div className="flex flex-col w-full">
+                            <div className=" flex flex-row justify-between">
+                                <div className="w-[40%]">
+                                    <ContactInput lable="Name" value={formData["name"]} onChange={onInputChange} name="name" />
+                                </div>
+                                <div className="w-[40%]">
+                                    <ContactInput lable="Company Name" value={formData["companyName"]} onChange={onInputChange} name="companyName" />
+                                </div>
+                            </div>
+                            <div className=" flex flex-row justify-between">
+                                <div className="w-[40%]">
+                                    <ContactInput lable="Number Of Screens" type="number" value={formData["numberScreen"]} onChange={onInputChange} name="numberScreen" />
+                                </div>
+                                <div className="w-[40%]">
+                                    <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
+                                </div>
+                            </div>
+                            <div className="w-full flex flex-row justify-between">
+                                <ContactInput lable="Phone" value={formData["phone"]} onChange={onInputChange} name="phone" />
+                            </div>
+                        </div>
+                        <Button className="w-[98%] max-w-[100%]" onClick={sendMail}>Send Message</Button>
+                    </div>
+                </div>
+            </CenterContainer>
+        </>
+
     )
 }
 
