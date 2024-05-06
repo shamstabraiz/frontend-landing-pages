@@ -15,7 +15,7 @@ function Header() {
                     navigate('/contact-us')
                 }}>Get Started</Button>
                 <Button onClick={() => {
-                    window.location.href = 'https://digital.vibesign.com'
+                    window.location.href = 'https://app.vibesign.com'
                 }}>Login</Button>
 
             </div>
