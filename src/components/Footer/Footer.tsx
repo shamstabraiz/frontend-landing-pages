@@ -9,35 +9,15 @@ function Footer() {
 
     return (
         <div className="flex p-5 bg-[#031624] flex-col justify-between items-center">
-            <div className="flex-wrap max-w-[1300px] w-[100%] gap-[46px] flex justify-center items-center flex-row py-[50px]">
-                <div className="max-w-[30%] max-md:max-w-[100%] flex gap-4 flex-col"><Logo /><p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur.</p></div>
+            <div className="flex-wrap max-w-[1300px] w-[100%] gap-[46px] flex justify-between items-center flex-row py-[50px]">
+                <div className="max-w-[30%] max-md:max-w-[100%] flex gap-4 flex-col"><Logo /><p>Vibe Sign is a highly effective digital signage system designed for optimal performance and user experience.</p></div>
                 <div><NavLinks
                     heading="Useful Links"
                     links={[
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-
-                    ]}
-                /></div>
-                <div><NavLinks
-                    heading="Useful Links"
-                    links={[
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-
-                    ]}
-                /></div>
-                <div><NavLinks
-                    heading="Useful Links"
-                    links={[
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
-                        { url: "/", text: "Lorem Ipsum" },
+                        { url: "/", text: "Home" },
+                        { url: "/pricing", text: "Pricing" },
+                        { url: "/partner", text: "Become Partner" },
+                        { url: "/contact-us", text: "Contact Us" },
 
                     ]}
                 /></div>
@@ -45,10 +25,10 @@ function Footer() {
                     <h3 className="text-xl mb-[16px]">
                         Have a great project?
                     </h3>
-                    <div className="flex flex-col items-center gap-[12px]">
+                    <div className="flex flex-col items-center gap-[12px] cursor-pointer">
                         <Button type="secondary" onClick={() => {
-                    navigate('/contact-us')
-                }}>
+                            navigate('/contact-us')
+                        }}>
                             Get in Touch
                         </Button>
                         <div className="flex gap-[22px] text-2xl cursor-pointer">

@@ -58,6 +58,10 @@ function Partner() {
                     description="Vibe Sign Partner Program is designed to help you grow your business by providing you with the tools and resources you need to sell digital signage solutions to your customers."
                     rightImage={false}
                     button="Get Started"
+                    customAction
+                    onClick={() => {
+                        window.scrollTo({ top: 1200, behavior: 'smooth' })
+                    }}
 
                 />
                 <TextWithImageAndButton
@@ -65,6 +69,10 @@ function Partner() {
                     title="Control You Clients"
                     description="The software is designed to be easy to use and intuitive, so you can spend less time training your clients and more time growing your business."
                     button="Get Started"
+                    customAction
+                    onClick={() => {
+                        window.scrollTo({ top: 1000, behavior: 'smooth' })
+                    }}
                 />
             </CenterContainer>
 
@@ -72,24 +80,24 @@ function Partner() {
                 <div className="flex flex-row justify-center items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
                     <div className="bg-Background p-12 rounded-6xl  w-full  max-w-[800px]">
                         <h4>Become A Partner</h4>
-                        <div className="flex flex-col w-full">
-                            <div className=" flex flex-row justify-between">
-                                <div className="w-[40%]">
+                        <div className="flex flex-col w-full" id="contact-us">
+                            <div className=" flex flex-row justify-between flex-wrap">
+                                <div className="w-[40%] max-sm:w-full">
                                     <ContactInput lable="Name" value={formData["name"]} onChange={onInputChange} name="name" />
                                 </div>
-                                <div className="w-[40%]">
+                                <div className="w-[40%] max-sm:w-full">
                                     <ContactInput lable="Company Name" value={formData["companyName"]} onChange={onInputChange} name="companyName" />
                                 </div>
                             </div>
-                            <div className=" flex flex-row justify-between">
-                                <div className="w-[40%]">
+                            <div className=" flex flex-row justify-between flex-wrap">
+                                <div className="w-[40%] max-sm:w-full">
                                     <ContactInput lable="Number Of Screens" type="number" value={formData["numberScreen"]} onChange={onInputChange} name="numberScreen" />
                                 </div>
-                                <div className="w-[40%]">
+                                <div className="w-[40%] max-sm:w-full">
                                     <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
                                 </div>
                             </div>
-                            <div className="w-full flex flex-row justify-between">
+                            <div className="w-full flex flex-row justify-between max-sm:w-full">
                                 <ContactInput lable="Phone" value={formData["phone"]} onChange={onInputChange} name="phone" />
                             </div>
                         </div>

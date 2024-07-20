@@ -49,8 +49,8 @@ function Contact() {
 
     return (
         <CenterContainer>
-            <div className="flex flex-row items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px]">
-                <div className="bg-Background p-12 rounded-6xl w-[55%]">
+            <div className="flex flex-row items-center gap-9 w-full bg-[#00000040] rounded-6xl p-3 max-w-[1300px] flex-wrap">
+                <div className="bg-Background p-12 rounded-6xl w-[55%]  max-sm:w-full">
                     <h4>Contact Information</h4>
                     <p className="pb-16">Say something to start a live chat!</p>
                     <div>
@@ -59,25 +59,25 @@ function Contact() {
                         <div className="flex flex-row gap-3"><FaLocationPin /> block 3, texsas USA</div>
                     </div>
                 </div>
-                <div className="flex w-full flex-col">
+                <div className="flex  flex-col w-[40%]  max-sm:w-full">
                     <div className="flex flex-col w-full">
-                        <div className=" flex flex-row justify-between">
-                            <div className="w-[40%]">
+                        <div className=" flex flex-row justify-between flex-wrap">
+                            <div className="w-[40%] max-sm:w-full">
                                 <ContactInput lable="First Name" value={formData["firstName"]} onChange={onInputChange} name="firstName" />
                             </div>
-                            <div className="w-[40%]">
+                            <div className="w-[40%] max-sm:w-full">
                                 <ContactInput lable="Last Name" value={formData["lastName"]} onChange={onInputChange} name="lastName" />
                             </div>
                         </div>
-                        <div className=" flex flex-row justify-between">
-                            <div className="w-[40%]">
+                        <div className=" flex flex-row justify-between flex-wrap">
+                            <div className="w-[40%] max-sm:w-full">
                                 <ContactInput lable="Email" value={formData["email"]} onChange={onInputChange} name="email" />
                             </div>
-                            <div className="w-[40%]">
+                            <div className="w-[40%] max-sm:w-full">
                                 <ContactInput lable="Phone Number" value={formData["phone"]} onChange={onInputChange} name="phone" />
                             </div>
                         </div>
-                        <div className="w-full flex flex-row justify-between">
+                        <div className="w-full flex flex-row justify-between flex-wrap">
                             <ContactInput lable="Message" onChange={onInputChange} value={formData["message"]} name="message" />
                         </div>
                     </div>

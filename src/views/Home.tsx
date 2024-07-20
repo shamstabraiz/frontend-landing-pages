@@ -21,10 +21,10 @@ function Home() {
         <main>
             <section className="mb-10 pb-10 bg-[linear-gradient(to_bottom,#042A45,rgba(16,71,52,0)),url('/src/assets/bg.png')] bg-no-repeat bg-cover min-h-[500px] max-h-[700px] flex items-center justify-center">
                 <div className="max-w-[800px] flex flex-col align-middle items-center text-center gap-4">
-                    <h1 className="text-6xl text-white font-semibold">
+                    <h1 className="text-6xl max-md:text-3xl text-white font-semibold">
                         Sign Up for Success: Powerful Signage Software Solutions
                     </h1>
-                    <h6 className="text-xl text-white">
+                    <h6 className="text-xl max-md:text-sm text-white">
                         Say goodbye to complexity and hello to effortless engagement with Vibe Sign, the best
                         signage system for businesses of all sizes
                     </h6>
@@ -34,7 +34,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="mt-[-170px] flex justify-center py-[50px]">
+            <section className="max-lg:hidden mt-[-170px] flex justify-center py-[50px]">
                 <FloatingIconBox />
             </section>
 
@@ -46,14 +46,14 @@ function Home() {
                         <h6>Connect with Your Audience in a Whole New Way: Vibesign</h6>
                     </div>
                 </div>
-                <div className="flex flex-row max-w-[967px] flex-wrap gap-[16px]">
+                <div className="flex flex-row max-w-[967px] flex-wrap gap-[16px] justify-center">
                     <IconBoxWIthText
                         icon={<svg width="41" height="70" viewBox="0 0 41 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40.502 0.5H0.813147C0.509037 0.5 0.113525 0.608745 0.113525 0.906827V54.7797C0.113525 55.0778 0.509037 55.4846 0.813147 55.4846H14.4389V65.1877H11.1986C10.8939 65.1877 10.5819 65.3053 10.5819 65.6034V68.7951C10.5819 69.0932 10.8939 69.5 11.1986 69.5H30.116C30.4207 69.5 30.4173 69.0932 30.4173 68.7951V65.6034C30.4173 65.3053 30.4207 65.1877 30.116 65.1877H26.5604V55.4846H40.5015C40.8056 55.4846 40.8863 55.0778 40.8863 54.7797V0.906827C40.8868 0.608745 40.8061 0.5 40.502 0.5ZM5.07238 50.0943V5.35157H35.9274V50.0943H5.07238Z" fill="white" />
                         </svg>
                         }
                         title="Stand Screens"
-                        text="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
+                        text="Vibe Sign is compatible with a wide range of stand screens, allowing you to display content on screens of all sizes and types."
                     />
                     <IconBoxWIthText
                         icon={<svg width="37" height="46" viewBox="0 0 37 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ function Home() {
                         </svg>
                         }
                         title="Tablets"
-                        text="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
+                        text="Vibe Sign is compatible with tablets, allowing you to display content on a variety of devices, including Android tablets."
                     />
                     <IconBoxWIthText
                         icon={<svg width="69" height="52" viewBox="0 0 69 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@ function Home() {
                         </svg>
                         }
                         title="Large Screens"
-                        text="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi."
+                        text="Vibe Sign is designed to work with large screens, making it ideal for businesses that want to display content on a big scale."
                     />
                 </div>
             </section>
@@ -124,25 +124,25 @@ function Home() {
 
             <CenterContainer>
                 <h3 className="text-center">What They say About Vibe Sign</h3>
-                <div className="flex flex-wrap flex-row gap-[44px]">
+                <div className="flex flex-wrap flex-row gap-[44px] justify-center">
 
                     <TestmonialCard
                         profile={profile}
                         name="Mark Thompson"
-                        review="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices."
+                        review="I have used Vibe Sign for my business and it has been a game-changer. The software is easy to use and the customer support is top-notch. I highly recommend Vibe Sign to anyone looking for a digital signage solution."
                         location="U.S.A. - 2 days ago"
                     />
                     <TestmonialCard
-                        profile={profile}
-                        name="Mark Thompson"
-                        review="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices."
-                        location="U.S.A. - 2 days ago"
+                        profile="https://img.freepik.com/free-photo/curly-man-with-broad-smile-shows-perfect-teeth-being-amused-by-interesting-talk-has-bushy-curly-dark-hair-stands-indoor-against-white-blank-wall_273609-17092.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715040000&semt=ais"
+                        name="John Doe"
+                        review="Vibe Sign has helped me take my business to the next level. The software is easy to use and the customer support is excellent. I highly recommend Vibe Sign to anyone looking for a digital signage solution."
+                        location="U.S.A. - 10 days ago"
                     />
                     <TestmonialCard
-                        profile={profile}
-                        name="Mark Thompson"
-                        review="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices."
-                        location="U.S.A. - 2 days ago"
+                        profile='https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/E12KS1G65-W0168RE00G7-133faf432639-512.jpeg'
+                        name="Bryan Smith"
+                        review="Its the best software I have ever used. The software is easy to use and the customer support is excellent. I highly recommend Vibe Sign to anyone looking for a digital signage solution."
+                        location="U.S.A. - 30 days ago"
                     />
                 </div>
 
@@ -151,12 +151,12 @@ function Home() {
             <CenterContainer>
                 <h3 className="text-center">Frequently Asked Questions</h3>
                 <div className="flex flex-wrap flex-row justify-around w-[100%] max-w-[1300px] gap-y-[32px]">
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
-                    <FaqItem title="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" answer="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi?" />
+                    <FaqItem title="What is a digital signage system?" answer="A digital signage system is a tool used to display dynamic content on digital screens. It can be used for advertising, broadcasting information, or enhancing customer experience." />
+                    <FaqItem title="How does a digital signage system work?" answer="A digital signage system works by using a software to manage and display content on a digital screen. This can be done remotely, allowing for real-time updates and scheduling of content." />
+                    <FaqItem title="What are the benefits of using a digital signage system?" answer="Digital signage systems offer many benefits such as increased engagement, improved communication, cost-effectiveness, and the ability to display real-time updates." />
+                    <FaqItem title="Can I customize the content on my digital signage system?" answer="Yes, digital signage systems typically allow for complete customization of the content displayed. This includes text, images, videos, and more." />
+                    <FaqItem title="Is a digital signage system difficult to use?" answer="Not at all. Most digital signage systems are designed to be user-friendly, with intuitive interfaces and easy-to-use content management systems." />
+                    <FaqItem title="What types of businesses can benefit from a digital signage system?" answer="Any business that wants to enhance communication, advertise products or services, or improve customer experience can benefit from a digital signage system. This includes retail stores, restaurants, corporate offices, and more." />
                 </div>
             </CenterContainer>
         </main >

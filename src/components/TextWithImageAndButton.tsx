@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Action/Button"
 
-function TextWithImageAndButton({ img, title, description, button, rightImage = true }: { img: string, title: string, description: string, button: string, rightImage?: boolean }) {
+function TextWithImageAndButton({ img, title, description, button, customAction ,rightImage = true, ...props }: { img: string, title: string, description: string, button: string, rightImage?: boolean, customAction?:boolean } & React.HtmlHTMLAttributes<HTMLButtonElement>) {
     const navigate = useNavigate();
 
     return (
@@ -9,9 +9,14 @@ function TextWithImageAndButton({ img, title, description, button, rightImage = 
             <div className="max-sm:w-[100%] w-[50%]">
                 <h2 className="m-2">{title}</h2>
                 <p className="m-2">{description}</p>
-                <Button onClick={() => {
-                    navigate('/contact-us')
-                }}>{button}</Button>
+                {!customAction &&
+                    <Button onClick={() => {
+                        navigate('/contact-us')
+                    }}>{button}</Button>
+                }
+                {customAction &&
+                    <Button {...props}>{button}</Button>
+                }
             </div>
             <img src={img} className="max-sm:w-[100%] w-[50%] max-w-[525px]" />
         </div>
